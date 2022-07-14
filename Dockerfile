@@ -17,4 +17,4 @@ COPY . /usr/src/wiki_citi_bot
 
 EXPOSE 8000
 CMD ["/opt/venv/bin/python", "manage.py", "migrate"]
-CMD ["/opt/venv/bin/python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["/opt/venv/bin/python", "manage.py", "run_bot"]

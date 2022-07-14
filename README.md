@@ -60,5 +60,5 @@ Before running the app upgrade a DB:
 Run the app with:
 
 ```
-(.venv) $ python manage.py runserver
+(.venv) $ python manage.py run_bot
 ```
