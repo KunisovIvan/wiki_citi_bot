@@ -1,0 +1,4 @@
+./venv
+.env
+
+#TODO: add .env.dev and env.local

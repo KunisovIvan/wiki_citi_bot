@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  wiki-citi-bot-pg:
+    container_name: wiki-citi-bot-pg
+    image: postgres:13.1-alpine
+    volumes:
+      - wiki-citi-bot-pg-data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=$PG_DB
+      - POSTGRES_USER=$PG_USER
+      - POSTGRES_PASSWORD=$PG_PASS
+    ports:
+      - $PG_PORT:5432
+
+  web:
+    build: .
+    ports:
+      - $PORT:8000
+    volumes:
+      - .:/usr/src/wiki_citi_bot
+    depends_on:
+      - wiki-citi-bot-pg
+
+volumes:
+  wiki-citi-bot-pg-data:
+    name: wiki-citi-bot-pg-data
