@@ -1,7 +1,7 @@
 # Wiki Citi Bot
 Tests django-project.
 
-# bot_name: wiki_citi_bot
+# bot_name: @user_wiki_citi_bot
 
 ## Start service with Docker
 
